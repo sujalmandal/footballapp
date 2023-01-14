@@ -19,6 +19,8 @@ import java.util.function.Function;
 @Component
 public class JWTHelper {
 
+    private Logger logger = LoggerFactory.getLogger(JWTHelper.class);
+
     private static final String SECRET_KEY = "my_little_secret";
     private static final int TEN_MINUTES = 10*60*1000;
     public static final String CLAIM_ATTR_ROLES = "roles";
@@ -26,8 +28,6 @@ public class JWTHelper {
 
     @Value("${spring.application.name}")
     private String appName;
-
-    Logger logger = LoggerFactory.getLogger(FootballMatchController.class);
 
     public boolean isJWTValid(String token) {
         try {
@@ -40,15 +40,15 @@ public class JWTHelper {
         }
     }
 
-    public String getUsername(String token) {
+    public String getUsernameClaim(String token) {
         return readVerifiedClaim(token, Claims::getSubject);
     }
 
     public <T> T readVerifiedClaim(String token, Function<Claims, T> claimFunc) {
-        return claimFunc.apply(parseClaim(token));
+        return claimFunc.apply(readVerifiedClaims(token));
     }
 
-    private Claims parseClaim(String token) {
+    private Claims readVerifiedClaims(String token) {
         return Jwts.parser()
                 .setSigningKey(SECRET_KEY)
                 .parseClaimsJws(token)
@@ -72,7 +72,18 @@ public class JWTHelper {
                 .compact();
     }
 
-    public JWTClaimsSet readToken(String jwt) throws ParseException {
-        return JWTParser.parse(jwt).getJWTClaimsSet();
+    /**
+     * just a token reader - does not verify the token
+     * @param jwt
+     * @return
+     * @throws ParseException
+     */
+    public JWTClaimsSet readToken(String jwt){
+        try{
+            return JWTParser.parse(jwt).getJWTClaimsSet();
+        } catch (ParseException e){
+            logger.error("cannot decode jwt : {}", e.getMessage(), e);
+            return null;
+        }
     }
 }

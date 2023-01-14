@@ -1,5 +1,7 @@
 package s.m.learning.footballapp.security;
 
+import com.nimbusds.jwt.JWTClaimsSet;
+import io.jsonwebtoken.Claims;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,17 +17,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 public class JWTAuthFilter extends OncePerRequestFilter {
 
     public static final String SPACE = " ";
     public static final List<String> WHITELISTED_URIS = List.of("/api/v1/auth/get-token");
 
-    private final InMemoryUserDetailsManager inMemoryUserDetailsManager;
+    private final InMemoryUserDetailsManager userRepo;
      private final JWTHelper jwtHelper;
 
-    public JWTAuthFilter(InMemoryUserDetailsManager inMemoryUserDetailsManager, JWTHelper jwtHelper) {
-        this.inMemoryUserDetailsManager = inMemoryUserDetailsManager;
+    public JWTAuthFilter(InMemoryUserDetailsManager userRepo, JWTHelper jwtHelper) {
+        this.userRepo = userRepo;
         this.jwtHelper = jwtHelper;
     }
 
@@ -37,7 +40,8 @@ public class JWTAuthFilter extends OncePerRequestFilter {
 
         if(isPublicResource){
             //set public security context
-            setupSecurityContext(request, User.builder().username("anonymous").password("").roles("PUBLIC").build());
+            setupSecurityContext(request, User.builder()
+                    .username("anonymous").password("").roles("PUBLIC").build(), Optional.empty());
             filterChain.doFilter(request, response);
             return;
         }
@@ -57,20 +61,21 @@ public class JWTAuthFilter extends OncePerRequestFilter {
         }
 
         // use in-memory user details
-        UserDetails userDetails = inMemoryUserDetailsManager
-                .loadUserByUsername(jwtHelper.getUsername(token));
+        UserDetails userDetails = userRepo
+                .loadUserByUsername(jwtHelper.getUsernameClaim(token));
 
         //inject authenticated user details in the security context
-        setupSecurityContext(request, userDetails);
+        setupSecurityContext(request, userDetails, Optional.ofNullable(jwtHelper.readToken(token)));
 
         filterChain.doFilter(request, response);
     }
 
-    private void setupSecurityContext(HttpServletRequest request, UserDetails userDetails) {
+    private void setupSecurityContext(HttpServletRequest request, UserDetails userDetails, Optional<JWTClaimsSet> verifiedClaims) {
         UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
                 userDetails, null, userDetails == null ? List.of() : userDetails.getAuthorities());
 
         authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
         SecurityContextHolder.getContext().setAuthentication(authentication);
+        verifiedClaims.ifPresent(ThreadLocalUserContext::set);
     }
 }
