@@ -8,3 +8,4 @@ footballapp:
   thread-pool-size:
     100
   jwt-expiry-minutes: 15
+  secret-key: highly-guarded-secret

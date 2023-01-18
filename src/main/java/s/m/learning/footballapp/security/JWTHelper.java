@@ -3,12 +3,12 @@ package s.m.learning.footballapp.security;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.JWTParser;
 import io.jsonwebtoken.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
+import s.m.learning.footballapp.config.FootBallAppProps;
 
 import java.text.ParseException;
 import java.util.Date;
@@ -16,17 +16,21 @@ import java.util.List;
 import java.util.function.Function;
 
 @Component
+@Slf4j
 public class JWTHelper {
 
-    private Logger logger = LoggerFactory.getLogger(JWTHelper.class);
-
-    private static final String SECRET_KEY = "my_little_secret";
-    private static final int TEN_MINUTES = 10*60*1000;
     public static final String CLAIM_ATTR_ROLES = "roles";
     public static final String ROLE_AUTHORITY_PREFIX = "ROLE_";
 
+    private final FootBallAppProps footBallAppProps;
+
     @Value("${spring.application.name}")
     private String appName;
+
+    public JWTHelper(FootBallAppProps footBallAppProps) {
+        this.footBallAppProps = footBallAppProps;
+    }
+
 
     public boolean isJWTValid(String token) {
         try {
@@ -34,7 +38,7 @@ public class JWTHelper {
             final Date now = new Date();
             return expiryDate.after(now);
         } catch (ExpiredJwtException expiredJwtException){
-            logger.error("jwt has expired!", expiredJwtException);
+            log.error("jwt has expired!", expiredJwtException);
             return false;
         }
     }
@@ -49,7 +53,7 @@ public class JWTHelper {
 
     private Claims readVerifiedClaims(String token) {
         return Jwts.parser()
-                .setSigningKey(SECRET_KEY)
+                .setSigningKey(footBallAppProps.getSecretKey())
                 .parseClaimsJws(token)
                 .getBody();
     }
@@ -66,9 +70,13 @@ public class JWTHelper {
                 .setClaims(claims)
                 .setIssuer(appName)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + TEN_MINUTES))
-                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
+                .setExpiration(getExpiryDate(System.currentTimeMillis()))
+                .signWith(SignatureAlgorithm.HS256, footBallAppProps.getSecretKey())
                 .compact();
+    }
+
+    private Date getExpiryDate(long from) {
+        return new Date(from+footBallAppProps.getJwtExpiryMinutes()*60*1000);
     }
 
     /**
@@ -81,7 +89,7 @@ public class JWTHelper {
         try{
             return JWTParser.parse(jwt).getJWTClaimsSet();
         } catch (ParseException e){
-            logger.error("cannot decode jwt : {}", e.getMessage(), e);
+            log.error("cannot decode jwt : {}", e.getMessage(), e);
             return null;
         }
     }
