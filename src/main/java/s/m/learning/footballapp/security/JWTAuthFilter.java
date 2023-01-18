@@ -1,7 +1,6 @@
 package s.m.learning.footballapp.security;
 
 import com.nimbusds.jwt.JWTClaimsSet;
-import io.jsonwebtoken.Claims;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;

@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
-import s.m.learning.footballapp.controller.FootballMatchController;
 
 import java.text.ParseException;
 import java.util.Date;
@@ -35,7 +34,7 @@ public class JWTHelper {
             final Date now = new Date();
             return expiryDate.after(now);
         } catch (ExpiredJwtException expiredJwtException){
-            logger.info("jwt has expired!");
+            logger.error("jwt has expired!", expiredJwtException);
             return false;
         }
     }
@@ -73,10 +72,10 @@ public class JWTHelper {
     }
 
     /**
-     * just a token reader - does not verify the token
-     * @param jwt
-     * @return
-     * @throws ParseException
+     * <b> just a token reader - does not verify the token </b>
+     *
+     * @param jwt - json web token
+     * @return Claims in the jwt
      */
     public JWTClaimsSet readToken(String jwt){
         try{

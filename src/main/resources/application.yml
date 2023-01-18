@@ -1,3 +1,9 @@
 spring:
   application:
     name: football-api-server
+
+footballapp:
+  external-service:
+    api:
+      football_matches:
+        https://jsonmock.hackerrank.com/api/football_matches?year=%s&page=%s
