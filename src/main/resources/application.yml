@@ -6,5 +6,5 @@ footballapp:
   football-api-baseurl:
         https://jsonmock.hackerrank.com/api/football_matches?year=%s&page=%s
   thread-pool-size:
-    25
+    100
   jwt-expiry-minutes: 15

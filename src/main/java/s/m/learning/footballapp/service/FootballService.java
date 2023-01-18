@@ -57,7 +57,7 @@ public class FootballService {
         final List<MatchDrawResponse.Draw> draws = compileAllDrawMatches(initialQueryResult.getData(), finalResult);
         //count how much time was taken
         stopWatch.stop();
-        return MatchDrawResponse.builder().draws(draws).totalDraws(draws.size())
+        return MatchDrawResponse.builder().draws(draws).totalDraws(draws.size()).year(year)
                 .timeTakenInSeconds((int) stopWatch.getTotalTimeSeconds()).build();
     }
 
