@@ -1,4 +1,4 @@
-package s.m.learning.footballapp.model;
+package s.m.learning.footballapp.model.external;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import lombok.Data;
 
@@ -11,6 +11,7 @@ public class PaginatedResponse<T> {
     @JsonAlias("per_page")
     private Integer perPage;
     private Integer total;
+    @JsonAlias("total_pages")
     private Integer totalPages;
     private List<T> data = new ArrayList<>();
 }

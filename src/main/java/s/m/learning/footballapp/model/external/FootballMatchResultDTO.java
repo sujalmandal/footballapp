@@ -1,4 +1,4 @@
-package s.m.learning.footballapp.model;
+package s.m.learning.footballapp.model.external;
 
 import lombok.Data;
 

@@ -3,7 +3,8 @@ spring:
     name: football-api-server
 
 footballapp:
-  external-service:
-    api:
-      football_matches:
+  football-api-baseurl:
         https://jsonmock.hackerrank.com/api/football_matches?year=%s&page=%s
+  thread-pool-size:
+    25
+  jwt-expiry-minutes: 15
