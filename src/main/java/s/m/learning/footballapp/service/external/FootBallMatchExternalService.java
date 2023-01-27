@@ -23,7 +23,6 @@ public class FootBallMatchExternalService {
         this.footBallAppProps = footBallAppProps;
     }
 
-    @SuppressWarnings("unchecked")
     public PaginatedResponse<FootballMatchResultDTO> getAllMatchesByYearAndPageInfo(Integer year, Integer pageNo){
         final String fullyQualifiedURL = footBallAppProps.getFootballApiBaseurl().formatted(year, pageNo);
         log.debug("request outbound on : {}", fullyQualifiedURL);

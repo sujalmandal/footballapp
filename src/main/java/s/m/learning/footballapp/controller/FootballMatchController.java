@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import s.m.learning.footballapp.instrumentation.Instrumented;
 import s.m.learning.footballapp.model.MatchDrawResponse;
 import s.m.learning.footballapp.service.FootballService;
 
@@ -28,6 +29,7 @@ public class FootballMatchController {
     @Secured({"ROLE_ADMIN","ROLE_USER"})
     @RequestMapping("/draws/{year}")
     @ResponseBody
+    @Instrumented
     public ResponseEntity<?> getDrawMatches(@PathVariable("year") String year){
         log.info("accessed by : {} with roles : {}", getUserName(), getRoles());
         final MatchDrawResponse result = footballService.getDrawMatches(Integer.valueOf(year));

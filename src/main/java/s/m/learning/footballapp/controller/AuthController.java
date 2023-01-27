@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import s.m.learning.footballapp.instrumentation.Instrumented;
 import s.m.learning.footballapp.model.CredentialDTO;
 import s.m.learning.footballapp.security.JWTHelper;
 
@@ -31,6 +32,7 @@ public class AuthController {
 
 	@Secured("ROLE_PUBLIC")
 	@PostMapping("/get-token")
+	@Instrumented
 	public ResponseEntity<?> authAndGetJWT(@RequestBody CredentialDTO credentialDTO) {
 		UserDetails user = userCredRepo.loadUserByUsername(credentialDTO.getUsername());
 		if(passwordEncoder.matches(credentialDTO.getPassword(), user.getPassword())){
@@ -43,6 +45,7 @@ public class AuthController {
 
 	@Secured({"ROLE_ADMIN"})
 	@RequestMapping("/introspect-token")
+	@Instrumented
 	public ResponseEntity<?> getUserDetail(@RequestBody CredentialDTO credentialDTO) throws ParseException {
 		return ResponseEntity.ok(jwtHelper.readToken(credentialDTO.getJwt()));
 	}
