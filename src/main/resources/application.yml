@@ -3,9 +3,7 @@ spring:
     name: football-api-server
 
 footballapp:
-  football-api-baseurl:
-        https://jsonmock.hackerrank.com/api/football_matches?year=%s&page=%s
-  thread-pool-size:
-    100
-  jwt-expiry-minutes: 15
-  secret-key: highly-guarded-secret
+  football-api-baseurl: ${FOOTBALL_API_BASEURL:https://jsonmock.hackerrank.com/api/football_matches?year=%s&page=%s}
+  thread-pool-size: ${THREAD_POOL_SIZE:100}
+  jwt-expiry-minutes: ${JWT_EXPIRY_MINUTES:15}
+  secret-key: ${SECRET_KEY:highly-guarded-secret}
