@@ -1,5 +1,8 @@
 version: "3.9"
-
+networks:
+  backend:
+    external: true
+    name: backend-network
 services:
   football-api-server:
 #    command:
@@ -10,8 +13,18 @@ services:
     image: sujaldocker/football-app:b1ecb16d291
     ports:
       - "8080:8080"
+    networks:
+      - backend
     environment:
       FOOTBALL_API_BASEURL: https://jsonmock.hackerrank.com/api/football_matches?year=%s&page=%s
       THREAD_POOL_SIZE: 100
       JWT_EXPIRY_MINUTES: 15
       SECRET_KEY: highly-guarded-secret
+#    logging:
+#      driver: splunk
+#      options:
+#        splunk-token: abcd1234
+#        splunk-url: https://ec2-18-60-247-76.ap-south-2.compute.amazonaws.com:8088
+#        splunk-insecureskipverify: "true"
+#        splunk-source: "football-api-server"
+#        splunk-sourcetype: "json"

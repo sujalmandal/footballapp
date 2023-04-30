@@ -1,0 +1,4356 @@
+openapi: 3.0.3
+info:
+  title: assessment
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: localhost
+paths:
+  /api/v1/football/draws/2011:
+    get:
+      summary: get-draws (USER,ADMIN)
+      description: get-draws (USER,ADMIN)
+      operationId: getDrawsUserAdmin
+      responses:
+        '200':
+          description: get-draws (USER,ADMIN)
+          headers:
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Date:
+              schema:
+                type: string
+                example: Wed, 18 Jan 2023 15:20:30 GMT
+            Expires:
+              schema:
+                type: string
+                example: '0'
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  draws:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        competition:
+                          type: string
+                          example: UEFA Champions League
+                        team1:
+                          type: string
+                          example: Barcelona
+                        team2:
+                          type: string
+                          example: AC Milan
+                        totalGoals:
+                          type: number
+                          example: 2
+                    example:
+                      - competition: UEFA Champions League
+                        team1: Barcelona
+                        team2: AC Milan
+                        totalGoals: 2
+                      - competition: UEFA Champions League
+                        team1: Borussia Dortmund
+                        team2: Arsenal
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Viktoria Plzen
+                        team2: BATE Borisov
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: KRC Genk
+                        team2: Valencia CF
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: AFC Ajax
+                        team2: Olympique Lyon
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Barcelona
+                        team2: AC Milan
+                        totalGoals: 2
+                      - competition: UEFA Champions League
+                        team1: Borussia Dortmund
+                        team2: Arsenal
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Viktoria Plzen
+                        team2: BATE Borisov
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: KRC Genk
+                        team2: Valencia CF
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: AFC Ajax
+                        team2: Olympique Lyon
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Lille OSC
+                        team2: CSKA Moskva
+                        totalGoals: 2
+                      - competition: UEFA Champions League
+                        team1: Manchester City
+                        team2: SSC Napoli
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: SL Benfica
+                        team2: Manchester United
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Manchester United
+                        team2: Basel
+                        totalGoals: 3
+                      - competition: UEFA Champions League
+                        team1: Trabzonspor
+                        team2: Lille OSC
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Shakhtar Donetsk
+                        team2: APOEL Nikosia
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Valencia CF
+                        team2: Chelsea
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: SSC Napoli
+                        team2: Bayern Munich
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: FC Porto
+                        team2: APOEL Nikosia
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Shakhtar Donetsk
+                        team2: Zenit St. Petersburg
+                        totalGoals: 2
+                      - competition: UEFA Champions League
+                        team1: BATE Borisov
+                        team2: AC Milan
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Arsenal
+                        team2: Olympique Marseille
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: KRC Genk
+                        team2: Chelsea
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: SL Benfica
+                        team2: Basel
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Trabzonspor
+                        team2: CSKA Moskva
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Olympique Lyon
+                        team2: AFC Ajax
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Trabzonspor
+                        team2: Internazionale
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Manchester United
+                        team2: SL Benfica
+                        totalGoals: 2
+                      - competition: UEFA Champions League
+                        team1: Zenit St. Petersburg
+                        team2: APOEL Nikosia
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Viktoria Plzen
+                        team2: AC Milan
+                        totalGoals: 2
+                      - competition: UEFA Champions League
+                        team1: KRC Genk
+                        team2: Bayer Leverkusen
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: FC Porto
+                        team2: Zenit St. Petersburg
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Lille OSC
+                        team2: Trabzonspor
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: CSKA Moskva
+                        team2: Real Madrid
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: AC Milan
+                        team2: Barcelona
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Barcelona
+                        team2: Chelsea
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Arsenal
+                        team2: Chelsea
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Arsenal
+                        team2: Fulham
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Arsenal
+                        team2: Norwich City
+                        totalGoals: 3
+                      - competition: English Premier League
+                        team1: Arsenal
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Everton
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Newcastle United
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Queens Park Rangers
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Stoke City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Sunderland
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Tottenham Hotspur
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Blackburn Rovers
+                        team2: Aston Villa
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Bolton Wanderers
+                        team2: Arsenal
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Bolton Wanderers
+                        team2: Swansea City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Bolton Wanderers
+                        team2: West Bromwich Albion
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Bolton Wanderers
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Chelsea
+                        team2: Fulham
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Chelsea
+                        team2: Manchester United
+                        totalGoals: 3
+                      - competition: English Premier League
+                        team1: Chelsea
+                        team2: Tottenham Hotspur
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Everton
+                        team2: Aston Villa
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Everton
+                        team2: Blackburn Rovers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Everton
+                        team2: Norwich City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Fulham
+                        team2: Aston Villa
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Fulham
+                        team2: Blackburn Rovers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Fulham
+                        team2: Chelsea
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Fulham
+                        team2: Manchester City
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Fulham
+                        team2: West Bromwich Albion
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Aston Villa
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Blackburn Rovers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Manchester City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Manchester United
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Norwich City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Stoke City
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Sunderland
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Swansea City
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Tottenham Hotspur
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Manchester City
+                        team2: Sunderland
+                        totalGoals: 3
+                      - competition: English Premier League
+                        team1: Manchester United
+                        team2: Everton
+                        totalGoals: 4
+                      - competition: English Premier League
+                        team1: Manchester United
+                        team2: Newcastle United
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Newcastle United
+                        team2: Arsenal
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Newcastle United
+                        team2: Sunderland
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Newcastle United
+                        team2: Swansea City
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Newcastle United
+                        team2: Tottenham Hotspur
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Newcastle United
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Norwich City
+                        team2: Blackburn Rovers
+                        totalGoals: 3
+                      - competition: English Premier League
+                        team1: Norwich City
+                        team2: Chelsea
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Norwich City
+                        team2: Everton
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Norwich City
+                        team2: Fulham
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Norwich City
+                        team2: Stoke City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Norwich City
+                        team2: Wigan Athletic
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Queens Park Rangers
+                        team2: Aston Villa
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Queens Park Rangers
+                        team2: Blackburn Rovers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Queens Park Rangers
+                        team2: Everton
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Queens Park Rangers
+                        team2: Newcastle United
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Queens Park Rangers
+                        team2: West Bromwich Albion
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Arsenal
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Aston Villa
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Bolton Wanderers
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Chelsea
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Everton
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Manchester City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Manchester United
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Wigan Athletic
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: Aston Villa
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: Bolton Wanderers
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: Everton
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: Fulham
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: Tottenham Hotspur
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: West Bromwich Albion
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Aston Villa
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Chelsea
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Queens Park Rangers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Sunderland
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Tottenham Hotspur
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Wigan Athletic
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 4
+                      - competition: English Premier League
+                        team1: Tottenham Hotspur
+                        team2: Chelsea
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Tottenham Hotspur
+                        team2: Stoke City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Tottenham Hotspur
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: West Bromwich Albion
+                        team2: Aston Villa
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: West Bromwich Albion
+                        team2: Fulham
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: West Bromwich Albion
+                        team2: Manchester City
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: Aston Villa
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: Blackburn Rovers
+                        totalGoals: 3
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: Chelsea
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: Everton
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: Liverpool
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: Norwich City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: West Bromwich Albion
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Wolverhampton Wanderers
+                        team2: Everton
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Wolverhampton Wanderers
+                        team2: Norwich City
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Wolverhampton Wanderers
+                        team2: Swansea City
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: FC Sochaux
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: Lille OSC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: FC Lorient
+                        team2: Girondins Bordeaux
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Olympique Lyon
+                        team2: AC Ajaccio
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: Paris Saint-Germain
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Valenciennes FC
+                        team2: Stade Brest
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AJ Auxerre
+                        team2: Olympique Marseille
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: AJ Auxerre
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: Olympique Lyon
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: Toulouse FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: AS Saint-Etienne
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: Stade Brest
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: FC Sochaux
+                        team2: FC Lorient
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: AJ Auxerre
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AJ Auxerre
+                        team2: SM Caen
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: Montpellier HSC
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Lille OSC
+                        team2: FC Sochaux
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Evian Thonon Gaillard
+                        team2: Paris Saint-Germain
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: AS Nancy
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: Lille OSC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: FC Lorient
+                        team2: AJ Auxerre
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: Valenciennes FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Saint-Etienne
+                        team2: Toulouse FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Lille OSC
+                        team2: FC Lorient
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: Dijon FCO
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Valenciennes FC
+                        team2: Olympique Marseille
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: AC Ajaccio
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: AS Saint-Etienne
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: SM Caen
+                        team2: OGC Nice
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Dijon FCO
+                        team2: AC Ajaccio
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Saint-Etienne
+                        team2: AJ Auxerre
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: Montpellier HSC
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: Stade Brest
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: SM Caen
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Toulouse FC
+                        team2: Olympique Marseille
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: Stade Brest
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: FC Sochaux
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: FC Lorient
+                        team2: Toulouse FC
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: FC Sochaux
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Valenciennes FC
+                        team2: Lille OSC
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Lille OSC
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: Valenciennes FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Saint-Etienne
+                        team2: Montpellier HSC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: Paris Saint-Germain
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Toulouse FC
+                        team2: Lille OSC
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: SM Caen
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: AS Saint-Etienne
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Dijon FCO
+                        team2: FC Sochaux
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: AC Ajaccio
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: Stade Brest
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: Girondins Bordeaux
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Montpellier HSC
+                        team2: Toulouse FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Paris Saint-Germain
+                        team2: Lille OSC
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AJ Auxerre
+                        team2: Dijon FCO
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Lille OSC
+                        team2: OGC Nice
+                        totalGoals: 4
+                      - competition: League 1
+                        team1: FC Lorient
+                        team2: SM Caen
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Toulouse FC
+                        team2: Stade Brest
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: FC Lorient
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: FC Lorient
+                        team2: FC Sochaux
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Evian Thonon Gaillard
+                        team2: Girondins Bordeaux
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: Stade Rennes
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: OGC Nice
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: Olympique Lyon
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: AJ Auxerre
+                        team2: FC Lorient
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: Dijon FCO
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: Paris Saint-Germain
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: FC Sochaux
+                        team2: AJ Auxerre
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: Stade Brest
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: SM Caen
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: Valenciennes FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Paris Saint-Germain
+                        team2: Montpellier HSC
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: AJ Auxerre
+                        team2: AS Saint-Etienne
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Olympique Lyon
+                        team2: Paris Saint-Germain
+                        totalGoals: 4
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: Lille OSC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Lille OSC
+                        team2: AJ Auxerre
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Dijon FCO
+                        team2: Montpellier HSC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: FC Sochaux
+                        team2: Valenciennes FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: SM Caen
+                        team2: Stade Brest
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Toulouse FC
+                        team2: FC Lorient
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: AS Nancy
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: AJ Auxerre
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: AC Ajaccio
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: SM Caen
+                        team2: Paris Saint-Germain
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: FC Lorient
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: Olympique Marseille
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Paris Saint-Germain
+                        team2: Girondins Bordeaux
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: Dijon FCO
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: SM Caen
+                        team2: AC Ajaccio
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: Olympique Lyon
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: AS Saint-Etienne
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: Girondins Bordeaux
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: AJ Auxerre
+                        team2: Paris Saint-Germain
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: SM Caen
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: AS Nancy
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: SM Caen
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Montpellier HSC
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: Toulouse FC
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Olympique Lyon
+                        team2: Stade Brest
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: FC Lorient
+                        team2: Dijon FCO
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AS Saint-Etienne
+                        team2: Olympique Marseille
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Toulouse FC
+                        team2: OGC Nice
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: Olympique Lyon
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Dijon FCO
+                        team2: Toulouse FC
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: SC Freiburg
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: Hertha BSC
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: VfB Stuttgart
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Kaiserslautern
+                        team2: FC Augsburg
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Koln
+                        team2: 1. FC Kaiserslautern
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: Hertha BSC
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Bayer Leverkusen
+                        team2: Borussia Dortmund
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Nurnberg
+                        team2: Werder Bremen
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Hertha BSC
+                        team2: FC Augsburg
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: Hannover 96
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: 1. FC Nurnberg
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 3
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: Bayern Munchen
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: Bayer Leverkusen
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: Werder Bremen
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Nurnberg
+                        team2: VfB Stuttgart
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Hertha BSC
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: VfL Wolfsburg
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: VfB Stuttgart
+                        team2: Borussia Dortmund
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: 1. FC Kaiserslautern
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: 1. FC Kaiserslautern
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Bayer Leverkusen
+                        team2: Hamburger SV
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: FC Schalke 04
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: SC Freiburg
+                        team2: Hertha BSC
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: 1. FC Koln
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: SC Freiburg
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Hertha BSC
+                        team2: Bayer Leverkusen
+                        totalGoals: 3
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: Hamburger SV
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: SC Freiburg
+                        team2: Hannover 96
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Kaiserslautern
+                        team2: Hertha BSC
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: VfL Wolfsburg
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: Borussia Dortmund
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: VfB Stuttgart
+                        team2: 1. FC Koln
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: 1. FSV Mainz 05
+                        team2: Hamburger SV
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: Bayer Leverkusen
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Borussia Dortmund
+                        team2: 1. FC Kaiserslautern
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: FC Augsburg
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: Hertha BSC
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Kaiserslautern
+                        team2: Hannover 96
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: Hannover 96
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: 1. FC Kaiserslautern
+                        team2: Werder Bremen
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Werder Bremen
+                        team2: Bayer Leverkusen
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: 1. FC Kaiserslautern
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: FC Schalke 04
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Bayer Leverkusen
+                        team2: VfB Stuttgart
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: VfL Wolfsburg
+                        team2: Bor. Monchengladbach
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: FC Augsburg
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: Bayern Munchen
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: SC Freiburg
+                        team2: Werder Bremen
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: 1. FSV Mainz 05
+                        team2: Hannover 96
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Werder Bremen
+                        team2: 1899 Hoffenheim
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: 1. FC Nurnberg
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: SC Freiburg
+                        team2: Bayern Munchen
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: Hamburger SV
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Kaiserslautern
+                        team2: VfL Wolfsburg
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: FC Augsburg
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: 1. FC Koln
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: VfB Stuttgart
+                        team2: 1. FC Kaiserslautern
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: SC Freiburg
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: Borussia Dortmund
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Werder Bremen
+                        team2: FC Augsburg
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Borussia Dortmund
+                        team2: VfB Stuttgart
+                        totalGoals: 4
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: FC Schalke 04
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Koln
+                        team2: Werder Bremen
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: SC Freiburg
+                        team2: 1. FC Nurnberg
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: Hertha BSC
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: Bayer Leverkusen
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Werder Bremen
+                        team2: Bor. Monchengladbach
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Bayer Leverkusen
+                        team2: Hertha BSC
+                        totalGoals: 3
+                      - competition: Bundesliga
+                        team1: Bayern Munchen
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: SC Freiburg
+                        team2: 1899 Hoffenheim
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: 1. FSV Mainz 05
+                        team2: VfL Wolfsburg
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: 1. FC Nurnberg
+                        team2: Hamburger SV
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Koln
+                        team2: VfB Stuttgart
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: FC Schalke 04
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: SC Freiburg
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: FC Augsburg
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Siena
+                        team2: ACF Fiorentina
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Udinese Calcio
+                        team2: Juventus
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Lazio Roma
+                        team2: Chievo Verona
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: US Palermo
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Parma FC
+                        team2: Calcio Catania
+                        totalGoals: 3
+                      - competition: Serie A
+                        team1: AC Milan
+                        team2: Lazio Roma
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Calcio Catania
+                        team2: AC Siena
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Chievo Verona
+                        team2: Novara Calcio
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Genoa CFC
+                        team2: Atalanta
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Inter
+                        team2: AS Roma
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Juventus
+                        team2: Bologna FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AC Milan
+                        team2: Udinese Calcio
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AS Roma
+                        team2: AC Siena
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: SSC Napoli
+                        team2: ACF Fiorentina
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: Udinese Calcio
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Calcio Catania
+                        team2: Juventus
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Lazio Roma
+                        team2: US Palermo
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: Calcio Catania
+                        totalGoals: 3
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: Chievo Verona
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: ACF Fiorentina
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Atalanta
+                        team2: Udinese Calcio
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: AC Siena
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Chievo Verona
+                        team2: Juventus
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Genoa CFC
+                        team2: US Lecce
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: Calcio Catania
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Juventus
+                        team2: Genoa CFC
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: SSC Napoli
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Atalanta
+                        team2: Inter
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: Cagliari Calcio
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Lazio Roma
+                        team2: Calcio Catania
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: AC Siena
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: US Lecce
+                        team2: Novara Calcio
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: SSC Napoli
+                        team2: Juventus
+                        totalGoals: 3
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: AC Milan
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: SSC Napoli
+                        team2: Lazio Roma
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Siena
+                        team2: Atalanta
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Atalanta
+                        team2: SSC Napoli
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: Bologna FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Chievo Verona
+                        team2: Atalanta
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Parma FC
+                        team2: US Palermo
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Atalanta
+                        team2: Calcio Catania
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Bologna FC
+                        team2: AC Milan
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: Parma FC
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: SSC Napoli
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AS Roma
+                        team2: Juventus
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: Atalanta
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Parma FC
+                        team2: US Lecce
+                        totalGoals: 3
+                      - competition: Serie A
+                        team1: Lazio Roma
+                        team2: Udinese Calcio
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Juventus
+                        team2: Cagliari Calcio
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: SSC Napoli
+                        team2: Bologna FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Calcio Catania
+                        team2: AS Roma
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Bologna FC
+                        team2: Parma FC
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: US Lecce
+                        team2: Chievo Verona
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: AC Siena
+                        team2: SSC Napoli
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: ACF Fiorentina
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Calcio Catania
+                        team2: Parma FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AS Roma
+                        team2: Bologna FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: SSC Napoli
+                        team2: AC Cesena
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Inter
+                        team2: US Palermo
+                        totalGoals: 4
+                      - competition: Serie A
+                        team1: Parma FC
+                        team2: Juventus
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: US Lecce
+                        team2: Bologna FC
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: Cagliari Calcio
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Milan
+                        team2: SSC Napoli
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Juventus
+                        team2: AC Siena
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: Calcio Catania
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Atalanta
+                        team2: US Lecce
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Parma FC
+                        team2: ACF Fiorentina
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Bologna FC
+                        team2: Juventus
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: Atalanta
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Udinese Calcio
+                        team2: Cagliari Calcio
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Genoa CFC
+                        team2: Parma FC
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: AC Milan
+                        team2: Juventus
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Juventus
+                        team2: Chievo Verona
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Udinese Calcio
+                        team2: Atalanta
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: US Lecce
+                        team2: Genoa CFC
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Inter
+                        team2: Calcio Catania
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Genoa CFC
+                        team2: Juventus
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Atalanta
+                        team2: Parma FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Inter
+                        team2: Atalanta
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Bologna FC
+                        team2: Chievo Verona
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: US Lecce
+                        team2: US Palermo
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Udinese Calcio
+                        team2: SSC Napoli
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: US Palermo
+                        team2: Udinese Calcio
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: SSC Napoli
+                        team2: Calcio Catania
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Genoa CFC
+                        team2: ACF Fiorentina
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: US Lecce
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: Parma FC
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Chievo Verona
+                        team2: AC Siena
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Calcio Catania
+                        team2: AC Milan
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: US Lecce
+                        team2: AC Cesena
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: Bologna FC
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: Genoa CFC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: Inter
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Genoa CFC
+                        team2: AC Cesena
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: US Palermo
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Siena
+                        team2: Bologna FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Chievo Verona
+                        team2: Udinese Calcio
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: Inter
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Milan
+                        team2: Bologna FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Lazio Roma
+                        team2: US Lecce
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: US Palermo
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: US Palermo
+                        team2: Calcio Catania
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: Chievo Verona
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AS Roma
+                        team2: SSC Napoli
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Chievo Verona
+                        team2: AS Roma
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Juventus
+                        team2: US Lecce
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: Novara Calcio
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Lazio Roma
+                        team2: AC Siena
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AS Roma
+                        team2: Calcio Catania
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: US Palermo
+                        team2: Chievo Verona
+                        totalGoals: 4
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: Cagliari Calcio
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Atletico Madrid
+                        team2: CA Osasuna
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: Rayo Vallecano
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Getafe CF
+                        team2: Levante UD
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Sociedad
+                        team2: FC Barcelona
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Sevilla FC
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Levante UD
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Rayo Vallecano
+                        team2: Real Zaragoza
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: CA Osasuna
+                        team2: Sevilla FC
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Real Madrid
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Valencia CF
+                        team2: FC Barcelona
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: Villarreal CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Granada CF
+                        team2: CA Osasuna
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sporting Gijon
+                        team2: Racing Santander
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Zaragoza
+                        team2: Malaga CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: CA Osasuna
+                        team2: RCD Mallorca
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Real Zaragoza
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Rayo Vallecano
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Atletico Madrid
+                        team2: Sevilla FC
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: RCD Mallorca
+                        team2: Valencia CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Getafe CF
+                        team2: Villarreal CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Granada CF
+                        team2: Atletico Madrid
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: FC Barcelona
+                        team2: Sevilla FC
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Sociedad
+                        team2: Getafe CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Atletico Madrid
+                        team2: RCD Mallorca
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Valencia CF
+                        team2: Athletic Bilbao
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sevilla FC
+                        team2: Racing Santander
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Getafe CF
+                        team2: CA Osasuna
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Sporting Gijon
+                        team2: Athletic Bilbao
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: RCD Mallorca
+                        team2: Sevilla FC
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: Malaga CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Granada CF
+                        team2: Racing Santander
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Zaragoza
+                        team2: Sporting Gijon
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Espanyol Barcelona
+                        team2: Villarreal CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: FC Barcelona
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Real Sociedad
+                        team2: Espanyol Barcelona
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: CA Osasuna
+                        team2: Rayo Vallecano
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: RCD Mallorca
+                        team2: Athletic Bilbao
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Granada CF
+                        team2: RCD Mallorca
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Real Sociedad
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Malaga CF
+                        team2: CA Osasuna
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: Racing Santander
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Real Sociedad
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Levante UD
+                        team2: RCD Mallorca
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Sociedad
+                        team2: CA Osasuna
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Malaga CF
+                        team2: Atletico Madrid
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Getafe CF
+                        team2: Athletic Bilbao
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Valencia CF
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Espanyol Barcelona
+                        team2: FC Barcelona
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Zaragoza
+                        team2: Getafe CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sevilla FC
+                        team2: Espanyol Barcelona
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: Sevilla FC
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: CA Osasuna
+                        team2: Valencia CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Levante UD
+                        team2: Real Zaragoza
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: FC Barcelona
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Valencia CF
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: Espanyol Barcelona
+                        totalGoals: 3
+                      - competition: La Liga
+                        team1: Levante UD
+                        team2: Racing Santander
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sporting Gijon
+                        team2: CA Osasuna
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Atletico Madrid
+                        team2: Valencia CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Atletico Madrid
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Getafe CF
+                        team2: Espanyol Barcelona
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sporting Gijon
+                        team2: Atletico Madrid
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Sporting Gijon
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: Getafe CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Athletic Bilbao
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: RCD Mallorca
+                        team2: CA Osasuna
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sevilla FC
+                        team2: Atletico Madrid
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Valencia CF
+                        team2: RCD Mallorca
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Real Zaragoza
+                        team2: CA Osasuna
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Madrid
+                        team2: Malaga CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: CA Osasuna
+                        team2: Getafe CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Real Madrid
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: Espanyol Barcelona
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: Sporting Gijon
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: Racing Santander
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Valencia CF
+                        team2: Levante UD
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Espanyol Barcelona
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Espanyol Barcelona
+                        team2: Real Sociedad
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: RCD Mallorca
+                        team2: Granada CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Madrid
+                        team2: Valencia CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Sociedad
+                        team2: Real Betis
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Granada CF
+                        team2: Athletic Bilbao
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Malaga CF
+                        team2: Real Sociedad
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Racing Santander
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sevilla FC
+                        team2: Levante UD
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Sociedad
+                        team2: Villarreal CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: CA Osasuna
+                        team2: Malaga CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: CA Osasuna
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: Atletico Madrid
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Getafe CF
+                        team2: Racing Santander
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Atletico Madrid
+                        team2: Real Sociedad
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: Getafe CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: FC Barcelona
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Espanyol Barcelona
+                        team2: Sevilla FC
+                        totalGoals: 1
+                  timeTakenInSeconds:
+                    type: number
+                    example: 20
+                  totalDraws:
+                    type: number
+                    example: 521
+                  year:
+                    type: number
+                    example: 0
+              examples:
+                get-draws (USER,ADMIN):
+                  value:
+                    draws:
+                      - competition: UEFA Champions League
+                        team1: Barcelona
+                        team2: AC Milan
+                        totalGoals: 2
+                      - competition: UEFA Champions League
+                        team1: Borussia Dortmund
+                        team2: Arsenal
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Viktoria Plzen
+                        team2: BATE Borisov
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: KRC Genk
+                        team2: Valencia CF
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: AFC Ajax
+                        team2: Olympique Lyon
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Barcelona
+                        team2: AC Milan
+                        totalGoals: 2
+                      - competition: UEFA Champions League
+                        team1: Borussia Dortmund
+                        team2: Arsenal
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Viktoria Plzen
+                        team2: BATE Borisov
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: KRC Genk
+                        team2: Valencia CF
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: AFC Ajax
+                        team2: Olympique Lyon
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Lille OSC
+                        team2: CSKA Moskva
+                        totalGoals: 2
+                      - competition: UEFA Champions League
+                        team1: Manchester City
+                        team2: SSC Napoli
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: SL Benfica
+                        team2: Manchester United
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Manchester United
+                        team2: Basel
+                        totalGoals: 3
+                      - competition: UEFA Champions League
+                        team1: Trabzonspor
+                        team2: Lille OSC
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Shakhtar Donetsk
+                        team2: APOEL Nikosia
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Valencia CF
+                        team2: Chelsea
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: SSC Napoli
+                        team2: Bayern Munich
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: FC Porto
+                        team2: APOEL Nikosia
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Shakhtar Donetsk
+                        team2: Zenit St. Petersburg
+                        totalGoals: 2
+                      - competition: UEFA Champions League
+                        team1: BATE Borisov
+                        team2: AC Milan
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Arsenal
+                        team2: Olympique Marseille
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: KRC Genk
+                        team2: Chelsea
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: SL Benfica
+                        team2: Basel
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Trabzonspor
+                        team2: CSKA Moskva
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Olympique Lyon
+                        team2: AFC Ajax
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Trabzonspor
+                        team2: Internazionale
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: Manchester United
+                        team2: SL Benfica
+                        totalGoals: 2
+                      - competition: UEFA Champions League
+                        team1: Zenit St. Petersburg
+                        team2: APOEL Nikosia
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Viktoria Plzen
+                        team2: AC Milan
+                        totalGoals: 2
+                      - competition: UEFA Champions League
+                        team1: KRC Genk
+                        team2: Bayer Leverkusen
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: FC Porto
+                        team2: Zenit St. Petersburg
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Lille OSC
+                        team2: Trabzonspor
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: CSKA Moskva
+                        team2: Real Madrid
+                        totalGoals: 1
+                      - competition: UEFA Champions League
+                        team1: AC Milan
+                        team2: Barcelona
+                        totalGoals: 0
+                      - competition: UEFA Champions League
+                        team1: Barcelona
+                        team2: Chelsea
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Arsenal
+                        team2: Chelsea
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Arsenal
+                        team2: Fulham
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Arsenal
+                        team2: Norwich City
+                        totalGoals: 3
+                      - competition: English Premier League
+                        team1: Arsenal
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Everton
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Newcastle United
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Queens Park Rangers
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Stoke City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Sunderland
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Tottenham Hotspur
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Aston Villa
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Blackburn Rovers
+                        team2: Aston Villa
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Bolton Wanderers
+                        team2: Arsenal
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Bolton Wanderers
+                        team2: Swansea City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Bolton Wanderers
+                        team2: West Bromwich Albion
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Bolton Wanderers
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Chelsea
+                        team2: Fulham
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Chelsea
+                        team2: Manchester United
+                        totalGoals: 3
+                      - competition: English Premier League
+                        team1: Chelsea
+                        team2: Tottenham Hotspur
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Everton
+                        team2: Aston Villa
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Everton
+                        team2: Blackburn Rovers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Everton
+                        team2: Norwich City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Fulham
+                        team2: Aston Villa
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Fulham
+                        team2: Blackburn Rovers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Fulham
+                        team2: Chelsea
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Fulham
+                        team2: Manchester City
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Fulham
+                        team2: West Bromwich Albion
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Aston Villa
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Blackburn Rovers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Manchester City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Manchester United
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Norwich City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Stoke City
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Sunderland
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Swansea City
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Liverpool
+                        team2: Tottenham Hotspur
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Manchester City
+                        team2: Sunderland
+                        totalGoals: 3
+                      - competition: English Premier League
+                        team1: Manchester United
+                        team2: Everton
+                        totalGoals: 4
+                      - competition: English Premier League
+                        team1: Manchester United
+                        team2: Newcastle United
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Newcastle United
+                        team2: Arsenal
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Newcastle United
+                        team2: Sunderland
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Newcastle United
+                        team2: Swansea City
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Newcastle United
+                        team2: Tottenham Hotspur
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Newcastle United
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Norwich City
+                        team2: Blackburn Rovers
+                        totalGoals: 3
+                      - competition: English Premier League
+                        team1: Norwich City
+                        team2: Chelsea
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Norwich City
+                        team2: Everton
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Norwich City
+                        team2: Fulham
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Norwich City
+                        team2: Stoke City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Norwich City
+                        team2: Wigan Athletic
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Queens Park Rangers
+                        team2: Aston Villa
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Queens Park Rangers
+                        team2: Blackburn Rovers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Queens Park Rangers
+                        team2: Everton
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Queens Park Rangers
+                        team2: Newcastle United
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Queens Park Rangers
+                        team2: West Bromwich Albion
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Arsenal
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Aston Villa
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Bolton Wanderers
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Chelsea
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Everton
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Manchester City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Manchester United
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Stoke City
+                        team2: Wigan Athletic
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: Aston Villa
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: Bolton Wanderers
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: Everton
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: Fulham
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: Tottenham Hotspur
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: West Bromwich Albion
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Sunderland
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Aston Villa
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Chelsea
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Queens Park Rangers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Sunderland
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Tottenham Hotspur
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Wigan Athletic
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Swansea City
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 4
+                      - competition: English Premier League
+                        team1: Tottenham Hotspur
+                        team2: Chelsea
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Tottenham Hotspur
+                        team2: Stoke City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Tottenham Hotspur
+                        team2: Wolverhampton Wanderers
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: West Bromwich Albion
+                        team2: Aston Villa
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: West Bromwich Albion
+                        team2: Fulham
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: West Bromwich Albion
+                        team2: Manchester City
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: Aston Villa
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: Blackburn Rovers
+                        totalGoals: 3
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: Chelsea
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: Everton
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: Liverpool
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: Norwich City
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Wigan Athletic
+                        team2: West Bromwich Albion
+                        totalGoals: 1
+                      - competition: English Premier League
+                        team1: Wolverhampton Wanderers
+                        team2: Everton
+                        totalGoals: 0
+                      - competition: English Premier League
+                        team1: Wolverhampton Wanderers
+                        team2: Norwich City
+                        totalGoals: 2
+                      - competition: English Premier League
+                        team1: Wolverhampton Wanderers
+                        team2: Swansea City
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: FC Sochaux
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: Lille OSC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: FC Lorient
+                        team2: Girondins Bordeaux
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Olympique Lyon
+                        team2: AC Ajaccio
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: Paris Saint-Germain
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Valenciennes FC
+                        team2: Stade Brest
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AJ Auxerre
+                        team2: Olympique Marseille
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: AJ Auxerre
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: Olympique Lyon
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: Toulouse FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: AS Saint-Etienne
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: Stade Brest
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: FC Sochaux
+                        team2: FC Lorient
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: AJ Auxerre
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AJ Auxerre
+                        team2: SM Caen
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: Montpellier HSC
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Lille OSC
+                        team2: FC Sochaux
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Evian Thonon Gaillard
+                        team2: Paris Saint-Germain
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: AS Nancy
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: Lille OSC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: FC Lorient
+                        team2: AJ Auxerre
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: Valenciennes FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Saint-Etienne
+                        team2: Toulouse FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Lille OSC
+                        team2: FC Lorient
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: Dijon FCO
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Valenciennes FC
+                        team2: Olympique Marseille
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: AC Ajaccio
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: AS Saint-Etienne
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: SM Caen
+                        team2: OGC Nice
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Dijon FCO
+                        team2: AC Ajaccio
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Saint-Etienne
+                        team2: AJ Auxerre
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: Montpellier HSC
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: Stade Brest
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: SM Caen
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Toulouse FC
+                        team2: Olympique Marseille
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: Stade Brest
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: FC Sochaux
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: FC Lorient
+                        team2: Toulouse FC
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: FC Sochaux
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Valenciennes FC
+                        team2: Lille OSC
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Lille OSC
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: Valenciennes FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Saint-Etienne
+                        team2: Montpellier HSC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: Paris Saint-Germain
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Toulouse FC
+                        team2: Lille OSC
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: SM Caen
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: AS Saint-Etienne
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Dijon FCO
+                        team2: FC Sochaux
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: AC Ajaccio
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: Stade Brest
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: Girondins Bordeaux
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Montpellier HSC
+                        team2: Toulouse FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Paris Saint-Germain
+                        team2: Lille OSC
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AJ Auxerre
+                        team2: Dijon FCO
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Lille OSC
+                        team2: OGC Nice
+                        totalGoals: 4
+                      - competition: League 1
+                        team1: FC Lorient
+                        team2: SM Caen
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Toulouse FC
+                        team2: Stade Brest
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: FC Lorient
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: FC Lorient
+                        team2: FC Sochaux
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Evian Thonon Gaillard
+                        team2: Girondins Bordeaux
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: Stade Rennes
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: OGC Nice
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: Olympique Lyon
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: AJ Auxerre
+                        team2: FC Lorient
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: Dijon FCO
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: Paris Saint-Germain
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: FC Sochaux
+                        team2: AJ Auxerre
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: Stade Brest
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: SM Caen
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: Valenciennes FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Paris Saint-Germain
+                        team2: Montpellier HSC
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: AJ Auxerre
+                        team2: AS Saint-Etienne
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Olympique Lyon
+                        team2: Paris Saint-Germain
+                        totalGoals: 4
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: Lille OSC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Lille OSC
+                        team2: AJ Auxerre
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Dijon FCO
+                        team2: Montpellier HSC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: FC Sochaux
+                        team2: Valenciennes FC
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: SM Caen
+                        team2: Stade Brest
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Toulouse FC
+                        team2: FC Lorient
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: AS Nancy
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: AJ Auxerre
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: AC Ajaccio
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: SM Caen
+                        team2: Paris Saint-Germain
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: FC Lorient
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: Olympique Marseille
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Paris Saint-Germain
+                        team2: Girondins Bordeaux
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Girondins Bordeaux
+                        team2: Dijon FCO
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: SM Caen
+                        team2: AC Ajaccio
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Stade Rennes
+                        team2: Olympique Lyon
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: AS Saint-Etienne
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: Girondins Bordeaux
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: AJ Auxerre
+                        team2: Paris Saint-Germain
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Olympique Marseille
+                        team2: SM Caen
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: AS Nancy
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AS Nancy
+                        team2: SM Caen
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Montpellier HSC
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 2
+                      - competition: League 1
+                        team1: Stade Brest
+                        team2: Toulouse FC
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Olympique Lyon
+                        team2: Stade Brest
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: FC Lorient
+                        team2: Dijon FCO
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: AS Saint-Etienne
+                        team2: Olympique Marseille
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: Toulouse FC
+                        team2: OGC Nice
+                        totalGoals: 0
+                      - competition: League 1
+                        team1: OGC Nice
+                        team2: Evian Thonon Gaillard
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: AC Ajaccio
+                        team2: Olympique Lyon
+                        totalGoals: 1
+                      - competition: League 1
+                        team1: Dijon FCO
+                        team2: Toulouse FC
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: SC Freiburg
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: Hertha BSC
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: VfB Stuttgart
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Kaiserslautern
+                        team2: FC Augsburg
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Koln
+                        team2: 1. FC Kaiserslautern
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: Hertha BSC
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Bayer Leverkusen
+                        team2: Borussia Dortmund
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Nurnberg
+                        team2: Werder Bremen
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Hertha BSC
+                        team2: FC Augsburg
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: Hannover 96
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: 1. FC Nurnberg
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 3
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: Bayern Munchen
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: Bayer Leverkusen
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: Werder Bremen
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Nurnberg
+                        team2: VfB Stuttgart
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Hertha BSC
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: VfL Wolfsburg
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: VfB Stuttgart
+                        team2: Borussia Dortmund
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: 1. FC Kaiserslautern
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: 1. FC Kaiserslautern
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Bayer Leverkusen
+                        team2: Hamburger SV
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: FC Schalke 04
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: SC Freiburg
+                        team2: Hertha BSC
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: 1. FC Koln
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: SC Freiburg
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Hertha BSC
+                        team2: Bayer Leverkusen
+                        totalGoals: 3
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: Hamburger SV
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: SC Freiburg
+                        team2: Hannover 96
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Kaiserslautern
+                        team2: Hertha BSC
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: VfL Wolfsburg
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: Borussia Dortmund
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: VfB Stuttgart
+                        team2: 1. FC Koln
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: 1. FSV Mainz 05
+                        team2: Hamburger SV
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: Bayer Leverkusen
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Borussia Dortmund
+                        team2: 1. FC Kaiserslautern
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: FC Augsburg
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: Hertha BSC
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Kaiserslautern
+                        team2: Hannover 96
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: Hannover 96
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: 1. FC Kaiserslautern
+                        team2: Werder Bremen
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Werder Bremen
+                        team2: Bayer Leverkusen
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: 1. FC Kaiserslautern
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: FC Schalke 04
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Bayer Leverkusen
+                        team2: VfB Stuttgart
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: VfL Wolfsburg
+                        team2: Bor. Monchengladbach
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: FC Augsburg
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: Bayern Munchen
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: SC Freiburg
+                        team2: Werder Bremen
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: 1. FSV Mainz 05
+                        team2: Hannover 96
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Werder Bremen
+                        team2: 1899 Hoffenheim
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: 1. FC Nurnberg
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: SC Freiburg
+                        team2: Bayern Munchen
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: Hamburger SV
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Kaiserslautern
+                        team2: VfL Wolfsburg
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: FC Augsburg
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: 1. FC Koln
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: VfB Stuttgart
+                        team2: 1. FC Kaiserslautern
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: SC Freiburg
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: Borussia Dortmund
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Werder Bremen
+                        team2: FC Augsburg
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Borussia Dortmund
+                        team2: VfB Stuttgart
+                        totalGoals: 4
+                      - competition: Bundesliga
+                        team1: 1899 Hoffenheim
+                        team2: FC Schalke 04
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Koln
+                        team2: Werder Bremen
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: SC Freiburg
+                        team2: 1. FC Nurnberg
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: Hertha BSC
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: Bayer Leverkusen
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Werder Bremen
+                        team2: Bor. Monchengladbach
+                        totalGoals: 2
+                      - competition: Bundesliga
+                        team1: Bayer Leverkusen
+                        team2: Hertha BSC
+                        totalGoals: 3
+                      - competition: Bundesliga
+                        team1: Bayern Munchen
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: SC Freiburg
+                        team2: 1899 Hoffenheim
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: 1. FSV Mainz 05
+                        team2: VfL Wolfsburg
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: 1. FC Nurnberg
+                        team2: Hamburger SV
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: 1. FC Koln
+                        team2: VfB Stuttgart
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: FC Augsburg
+                        team2: FC Schalke 04
+                        totalGoals: 1
+                      - competition: Bundesliga
+                        team1: Hannover 96
+                        team2: SC Freiburg
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Hamburger SV
+                        team2: 1. FSV Mainz 05
+                        totalGoals: 0
+                      - competition: Bundesliga
+                        team1: Bor. Monchengladbach
+                        team2: FC Augsburg
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Siena
+                        team2: ACF Fiorentina
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Udinese Calcio
+                        team2: Juventus
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Lazio Roma
+                        team2: Chievo Verona
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: US Palermo
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Parma FC
+                        team2: Calcio Catania
+                        totalGoals: 3
+                      - competition: Serie A
+                        team1: AC Milan
+                        team2: Lazio Roma
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Calcio Catania
+                        team2: AC Siena
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Chievo Verona
+                        team2: Novara Calcio
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Genoa CFC
+                        team2: Atalanta
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Inter
+                        team2: AS Roma
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Juventus
+                        team2: Bologna FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AC Milan
+                        team2: Udinese Calcio
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AS Roma
+                        team2: AC Siena
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: SSC Napoli
+                        team2: ACF Fiorentina
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: Udinese Calcio
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Calcio Catania
+                        team2: Juventus
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Lazio Roma
+                        team2: US Palermo
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: Calcio Catania
+                        totalGoals: 3
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: Chievo Verona
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: ACF Fiorentina
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Atalanta
+                        team2: Udinese Calcio
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: AC Siena
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Chievo Verona
+                        team2: Juventus
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Genoa CFC
+                        team2: US Lecce
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: Calcio Catania
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Juventus
+                        team2: Genoa CFC
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: SSC Napoli
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Atalanta
+                        team2: Inter
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: Cagliari Calcio
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Lazio Roma
+                        team2: Calcio Catania
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: AC Siena
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: US Lecce
+                        team2: Novara Calcio
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: SSC Napoli
+                        team2: Juventus
+                        totalGoals: 3
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: AC Milan
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: SSC Napoli
+                        team2: Lazio Roma
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Siena
+                        team2: Atalanta
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Atalanta
+                        team2: SSC Napoli
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: Bologna FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Chievo Verona
+                        team2: Atalanta
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Parma FC
+                        team2: US Palermo
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Atalanta
+                        team2: Calcio Catania
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Bologna FC
+                        team2: AC Milan
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: Parma FC
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: SSC Napoli
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AS Roma
+                        team2: Juventus
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: Atalanta
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Parma FC
+                        team2: US Lecce
+                        totalGoals: 3
+                      - competition: Serie A
+                        team1: Lazio Roma
+                        team2: Udinese Calcio
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Juventus
+                        team2: Cagliari Calcio
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: SSC Napoli
+                        team2: Bologna FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Calcio Catania
+                        team2: AS Roma
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Bologna FC
+                        team2: Parma FC
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: US Lecce
+                        team2: Chievo Verona
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: AC Siena
+                        team2: SSC Napoli
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: ACF Fiorentina
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Calcio Catania
+                        team2: Parma FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AS Roma
+                        team2: Bologna FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: SSC Napoli
+                        team2: AC Cesena
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Inter
+                        team2: US Palermo
+                        totalGoals: 4
+                      - competition: Serie A
+                        team1: Parma FC
+                        team2: Juventus
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: US Lecce
+                        team2: Bologna FC
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: Cagliari Calcio
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Milan
+                        team2: SSC Napoli
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Juventus
+                        team2: AC Siena
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: Calcio Catania
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Atalanta
+                        team2: US Lecce
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Parma FC
+                        team2: ACF Fiorentina
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Bologna FC
+                        team2: Juventus
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: Atalanta
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Udinese Calcio
+                        team2: Cagliari Calcio
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Genoa CFC
+                        team2: Parma FC
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: AC Milan
+                        team2: Juventus
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Juventus
+                        team2: Chievo Verona
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Udinese Calcio
+                        team2: Atalanta
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: US Lecce
+                        team2: Genoa CFC
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Inter
+                        team2: Calcio Catania
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Genoa CFC
+                        team2: Juventus
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Atalanta
+                        team2: Parma FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Inter
+                        team2: Atalanta
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Bologna FC
+                        team2: Chievo Verona
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: US Lecce
+                        team2: US Palermo
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Udinese Calcio
+                        team2: SSC Napoli
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: US Palermo
+                        team2: Udinese Calcio
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: SSC Napoli
+                        team2: Calcio Catania
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Genoa CFC
+                        team2: ACF Fiorentina
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: US Lecce
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: Parma FC
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Chievo Verona
+                        team2: AC Siena
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Calcio Catania
+                        team2: AC Milan
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: US Lecce
+                        team2: AC Cesena
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: Bologna FC
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Novara Calcio
+                        team2: Genoa CFC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: Inter
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Genoa CFC
+                        team2: AC Cesena
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: US Palermo
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Siena
+                        team2: Bologna FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Chievo Verona
+                        team2: Udinese Calcio
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: Inter
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AC Milan
+                        team2: Bologna FC
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Lazio Roma
+                        team2: US Lecce
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AC Cesena
+                        team2: US Palermo
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: US Palermo
+                        team2: Calcio Catania
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: Cagliari Calcio
+                        team2: Chievo Verona
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: AS Roma
+                        team2: SSC Napoli
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Chievo Verona
+                        team2: AS Roma
+                        totalGoals: 0
+                      - competition: Serie A
+                        team1: Juventus
+                        team2: US Lecce
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: Novara Calcio
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: Lazio Roma
+                        team2: AC Siena
+                        totalGoals: 1
+                      - competition: Serie A
+                        team1: AS Roma
+                        team2: Calcio Catania
+                        totalGoals: 2
+                      - competition: Serie A
+                        team1: US Palermo
+                        team2: Chievo Verona
+                        totalGoals: 4
+                      - competition: Serie A
+                        team1: ACF Fiorentina
+                        team2: Cagliari Calcio
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Atletico Madrid
+                        team2: CA Osasuna
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: Rayo Vallecano
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Getafe CF
+                        team2: Levante UD
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Sociedad
+                        team2: FC Barcelona
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Sevilla FC
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Levante UD
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Rayo Vallecano
+                        team2: Real Zaragoza
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: CA Osasuna
+                        team2: Sevilla FC
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Real Madrid
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Valencia CF
+                        team2: FC Barcelona
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: Villarreal CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Granada CF
+                        team2: CA Osasuna
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sporting Gijon
+                        team2: Racing Santander
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Zaragoza
+                        team2: Malaga CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: CA Osasuna
+                        team2: RCD Mallorca
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Real Zaragoza
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Rayo Vallecano
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Atletico Madrid
+                        team2: Sevilla FC
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: RCD Mallorca
+                        team2: Valencia CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Getafe CF
+                        team2: Villarreal CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Granada CF
+                        team2: Atletico Madrid
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: FC Barcelona
+                        team2: Sevilla FC
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Sociedad
+                        team2: Getafe CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Atletico Madrid
+                        team2: RCD Mallorca
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Valencia CF
+                        team2: Athletic Bilbao
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sevilla FC
+                        team2: Racing Santander
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Getafe CF
+                        team2: CA Osasuna
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Sporting Gijon
+                        team2: Athletic Bilbao
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: RCD Mallorca
+                        team2: Sevilla FC
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: Malaga CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Granada CF
+                        team2: Racing Santander
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Zaragoza
+                        team2: Sporting Gijon
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Espanyol Barcelona
+                        team2: Villarreal CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: FC Barcelona
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Real Sociedad
+                        team2: Espanyol Barcelona
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: CA Osasuna
+                        team2: Rayo Vallecano
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: RCD Mallorca
+                        team2: Athletic Bilbao
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Granada CF
+                        team2: RCD Mallorca
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Real Sociedad
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Malaga CF
+                        team2: CA Osasuna
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: Racing Santander
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Real Sociedad
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Levante UD
+                        team2: RCD Mallorca
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Sociedad
+                        team2: CA Osasuna
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Malaga CF
+                        team2: Atletico Madrid
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Getafe CF
+                        team2: Athletic Bilbao
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Valencia CF
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Espanyol Barcelona
+                        team2: FC Barcelona
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Zaragoza
+                        team2: Getafe CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sevilla FC
+                        team2: Espanyol Barcelona
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: Sevilla FC
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: CA Osasuna
+                        team2: Valencia CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Levante UD
+                        team2: Real Zaragoza
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: FC Barcelona
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Valencia CF
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: Espanyol Barcelona
+                        totalGoals: 3
+                      - competition: La Liga
+                        team1: Levante UD
+                        team2: Racing Santander
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sporting Gijon
+                        team2: CA Osasuna
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Atletico Madrid
+                        team2: Valencia CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Atletico Madrid
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Getafe CF
+                        team2: Espanyol Barcelona
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sporting Gijon
+                        team2: Atletico Madrid
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Racing Santander
+                        team2: Sporting Gijon
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: Getafe CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Athletic Bilbao
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: RCD Mallorca
+                        team2: CA Osasuna
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sevilla FC
+                        team2: Atletico Madrid
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Valencia CF
+                        team2: RCD Mallorca
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Real Zaragoza
+                        team2: CA Osasuna
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Madrid
+                        team2: Malaga CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: CA Osasuna
+                        team2: Getafe CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Real Madrid
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: Espanyol Barcelona
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: Sporting Gijon
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: Racing Santander
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Valencia CF
+                        team2: Levante UD
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Espanyol Barcelona
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Espanyol Barcelona
+                        team2: Real Sociedad
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: RCD Mallorca
+                        team2: Granada CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Madrid
+                        team2: Valencia CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Sociedad
+                        team2: Real Betis
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Granada CF
+                        team2: Athletic Bilbao
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Malaga CF
+                        team2: Real Sociedad
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: Racing Santander
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Sevilla FC
+                        team2: Levante UD
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Sociedad
+                        team2: Villarreal CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: CA Osasuna
+                        team2: Malaga CF
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Villarreal CF
+                        team2: CA Osasuna
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: Atletico Madrid
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Getafe CF
+                        team2: Racing Santander
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Atletico Madrid
+                        team2: Real Sociedad
+                        totalGoals: 1
+                      - competition: La Liga
+                        team1: Athletic Bilbao
+                        team2: Getafe CF
+                        totalGoals: 0
+                      - competition: La Liga
+                        team1: Real Betis
+                        team2: FC Barcelona
+                        totalGoals: 2
+                      - competition: La Liga
+                        team1: Espanyol Barcelona
+                        team2: Sevilla FC
+                        totalGoals: 1
+                    timeTakenInSeconds: 20
+                    totalDraws: 521
+                    year: 0
+  /api/v1/auth/get-token:
+    post:
+      summary: get-token (PUBLIC)
+      description: get-token (PUBLIC)
+      operationId: getTokenPublic
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  example: user123
+                username:
+                  type: string
+                  example: user
+            example:
+              password: user123
+              username: user
+      responses:
+        '200':
+          description: get-token (PUBLIC)
+          headers:
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Length:
+              schema:
+                type: string
+                example: '189'
+            Date:
+              schema:
+                type: string
+                example: Wed, 18 Jan 2023 15:19:19 GMT
+            Expires:
+              schema:
+                type: string
+                example: '0'
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=60
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+          content:
+            text/plain:
+              examples:
+                get-token (PUBLIC):
+                  value: >-
+                    eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOlsiVVNFUiJdLCJpc3MiOiJmb290YmFsbC1hcGktc2VydmVyIiwiaWF0IjoxNjc0MDU1MTU5LCJleHAiOjE2NzQwNTU3NTl9._7_xXUz-6mxgYCiV9XbRgVlmOPZRoeSYO688pq3u6z8
+  /api/v1/auth/introspect-token:
+    post:
+      summary: introspect-token (ADMIN)
+      description: introspect-token (ADMIN)
+      operationId: introspectTokenAdmin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jwt:
+                  type: string
+                  example: >-
+                    eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOlsiVVNFUiJdLCJpc3MiOiJmb290YmFsbC1hcGktc2VydmVyIiwiaWF0IjoxNjczNjgxNTcxLCJleHAiOjE2NzM2ODIxNzF9.blhF019EbDaaOrdg5Fms84q17TwjFMwLUW62aigK9EQ
+            example:
+              jwt: >-
+                eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOlsiVVNFUiJdLCJpc3MiOiJmb290YmFsbC1hcGktc2VydmVyIiwiaWF0IjoxNjczNjgxNTcxLCJleHAiOjE2NzM2ODIxNzF9.blhF019EbDaaOrdg5Fms84q17TwjFMwLUW62aigK9EQ
+      responses:
+        '200':
+          description: ''
+tags: []
